@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	var randoNumber = Math.floor(Math.random() * (120-19)) + 19;
+	var randoNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 	console.log(randoNumber);
 
 	$("#number_to_guess").text(randoNumber);
@@ -54,14 +54,14 @@ $(document).ready(function(){
 
 	function reset(){
 		sum = 0;
-		randoNumber = Math.floor(Math.random() * (120-19)) + 19;
+		randoNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 		$("#number_to_guess").text(randoNumber);
 		$("#wins").text(wins);
 		$("#losses").text(losses);
 		$("#current-sum").text(sum);
 		
 		for(var i = 0; i < numValues.length; i++){
-			numValues[i] = Math.floor(Math.random() * 11) + 1;
+			numValues[i] = Math.floor(Math.random() * 12) + 1;
 		}
 	
 		$("#images").empty(); //Get rid of old pics, replace them with new
